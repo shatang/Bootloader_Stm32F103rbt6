@@ -1,0 +1,21 @@
+#include "led.h"
+#include "delay.h"
+#include "sys.h"
+#include "key.h"
+
+int main(void)
+{
+u8 t=0;
+delay_init();	    	 //延时函数初始化
+LED_Init();		  	 	//初始化与LED连接的硬件接口
+KEY_Init();          	//初始化与按键连接的硬件接口
+            LED0=0;					//点亮LED
+            while(1)
+            {
+
+                LED0=!LED0;
+                delay_ms(300);
+
+
+    }
+}
